@@ -8,12 +8,13 @@ import City from './app/container/City/City'
 import Counter from './app/container/Count/Counter'
 import Product from './app/container/Product/Product'
 import ProductClass from './app/container/ProductClass/ProductClass'
+import Timer from './app/container/Timer/Timerclass'
 
 export default function App() {
   return (
     <View>
 
-    <ProductClass></ProductClass>
+   <Timer></Timer>
     </View>
   )
 }
