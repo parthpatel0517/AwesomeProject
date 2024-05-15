@@ -15,11 +15,13 @@ export default class Timer extends Component {
             time: new Date()
         })
     }
+    
     componentDidMount=()=>{
        this.timeref= setInterval(this.tick,1000)
     }
     
     componentDidUpdate=(prevProps,prevState)=>{
+
         if(prevState.time !== this.state.time){
             console.log("componentDidUpdate");
         }

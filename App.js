@@ -9,12 +9,13 @@ import Counter from './app/container/Count/Counter'
 import Product from './app/container/Product/Product'
 import ProductClass from './app/container/ProductClass/ProductClass'
 import Timer from './app/container/Timer/Timerclass'
+import TimerFun from './app/container/Timer/TimerFun'
 
 export default function App() {
   return (
     <View>
 
-   <Timer></Timer>
+   <TimerFun></TimerFun>
     </View>
   )
 }
