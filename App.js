@@ -10,12 +10,24 @@ import Product from './app/container/Product/Product'
 import ProductClass from './app/container/ProductClass/ProductClass'
 import Timer from './app/container/Timer/Timerclass'
 import TimerFun from './app/container/Timer/TimerFun'
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './app/container/Home/Home'
+import Details from './app/container/Details/Details'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View>
-
-   <TimerFun></TimerFun>
-    </View>
+  
+     <NavigationContainer>
+     <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
+      </Stack.Navigator>
+     </NavigationContainer>
+  
+  
   )
 }
