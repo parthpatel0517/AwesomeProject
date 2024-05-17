@@ -11,7 +11,13 @@ const Stack = createNativeStackNavigator();
 const ProductStack = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="City" component={City} />
+            <Stack.Screen
+              options={{
+                headerShown:false
+              }} 
+             name="City" 
+             component={City}
+             />
             <Stack.Screen name="Country" component={Country} />
         </Stack.Navigator>
     )
@@ -19,7 +25,11 @@ const ProductStack = () => {
 
 const HomeStack = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            screenOptions={ {
+                headerShown: false
+            }}
+        >
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Details" component={Details} />
         </Stack.Navigator>

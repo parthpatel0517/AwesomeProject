@@ -7,16 +7,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { HomeStack, ProductStack } from './app/navigator/StackNavigation';
 import 'react-native-gesture-handler';
 import DrawerNavigation from './app/navigator/DrawerNavigation';
+import BottomNavigation from './app/navigator/BottomNavigation';
 
-
-const Stack = createNativeStackNavigator();
 
 
 export default function App() {
   return (
   
      <NavigationContainer>
-      <DrawerNavigation />
+      <BottomNavigation />
      </NavigationContainer>
   
   
