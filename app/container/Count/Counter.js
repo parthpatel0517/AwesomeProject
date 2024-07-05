@@ -1,30 +1,28 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { decrement, increment } from '../../redux/action/counter.action';
 
 export default function Counter() {
-    const [Count , setCount ] = useState('0');
+    const dispatch = useDispatch();//3
+    //2
+    const handalInc = ()=>{
+        dispatch(increment()); //4
+    }
+    const handalDec = ()=>{
+        dispatch(decrement()); 
+    }
 
-    const handalInc = () => {
-        if(Count < 5){
-            setCount(Count + 1)
-        }
-       
-    }
-    const handalDec = () => {
-        if(Count > -5){
-            setCount(Count - 1)
-        }
-       
-    }
   return (
+    
     <View>
       <Text>Counter</Text>
-
-      <TouchableOpacity onPress={handalInc}>
+     {/* 1 */}
+      <TouchableOpacity onPress={handalInc}> 
             <Text>+</Text>
         </TouchableOpacity>
 
-        <Text>{Count}</Text>
+        {/* <Text>{Count}</Text> */}
 
         <TouchableOpacity onPress={handalDec}>
             <Text>-</Text>

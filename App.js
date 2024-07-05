@@ -8,6 +8,7 @@ import BottomNavigation from './app/navigator/BottomNavigation';
 import Switche from './app/component/AllComponent';
 import Buttons from './app/component/AllComponent';
 import AllComponent from './app/component/AllComponent';
+import Counter from './app/container/Count/Counter';
 
 
 
@@ -15,7 +16,8 @@ export default function App() {
   return (
   
     <>
-    <AllComponent></AllComponent>
+    {/* <AllComponent></AllComponent> */}
+    <Counter></Counter>
     </>
   
   )
