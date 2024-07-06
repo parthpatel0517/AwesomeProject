@@ -9,16 +9,19 @@ import Switche from './app/component/AllComponent';
 import Buttons from './app/component/AllComponent';
 import AllComponent from './app/component/AllComponent';
 import Counter from './app/container/Count/Counter';
+import { Provider } from 'react-redux';
+import { configurestore } from './app/redux/store';
 
 
 
 export default function App() {
+  const store = configurestore()
   return (
   
-    <>
+    <Provider store={store}>
     {/* <AllComponent></AllComponent> */}
     <Counter></Counter>
-    </>
+    </Provider>
   
   )
 }
